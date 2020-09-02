@@ -13,7 +13,7 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
 
-        self.screen = pygame.display.set_mode((190,180))
+        self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption("Alien Invasion")
@@ -24,6 +24,7 @@ class AlienInvasion:
         """Start the main loop for the game."""
         while True:
             self._check_events()
+            self.ship.update()
             self._update_screen()
 
     def _check_events(self):
