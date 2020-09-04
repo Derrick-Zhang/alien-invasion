@@ -167,11 +167,6 @@ class AlienInvasion:
         # Pause.
         sleep(0.5)
 
-    def center_ship(self):
-        """Center the ship on the screen."""
-        self.rect.midbottom = self.screen_rect.midbottom
-        self.x = float(self.rect.x)
-
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
         self.screen.fill(self.settings.bg_color)
